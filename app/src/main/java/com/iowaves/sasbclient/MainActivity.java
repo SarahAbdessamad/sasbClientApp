@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        a=(TextView) findViewById(R.id.enter);
-        b=(TextView) findViewById(R.id.enter1);
-        c=(TextView) findViewById(R.id.enter2);
-        d=(TextView) findViewById(R.id.enter3);
+        a=(TextView) findViewById(R.id.adress);
+        b=(TextView) findViewById(R.id.adress1);
+        c=(TextView) findViewById(R.id.adress2);
+        d=(TextView) findViewById(R.id.adress3);
 
         Button b1 = findViewById(R.id.button1);
         EditText inputText = (EditText) findViewById(R.id.adress);
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 //FirebaseApp.initializeApp(ctx);
 
 
-                reff= FirebaseDatabase.getInstance().getReference().child("User");
+                reff= FirebaseDatabase.getInstance().getReference().child("sasb");
                 reff.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
